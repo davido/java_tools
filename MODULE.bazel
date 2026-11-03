@@ -1,0 +1,5 @@
+module(
+    name = "java_tools",
+    version = "22.0",
+    bazel_compatibility = [">=9.3.0"],
+)

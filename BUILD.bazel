@@ -1,0 +1,12 @@
+load(":check_catalog.bzl", "validate_catalog")
+
+package(default_visibility = ["//visibility:public"])
+
+exports_files([
+    "catalog.bzl",
+    "LICENSE",
+])
+
+validate_catalog()
+
+filegroup(name = "check_catalog")
