@@ -1,0 +1,35 @@
+{
+  "snapshot_version": "v23.0-davido.1",
+  "upstream_release": false,
+  "artifacts": [
+    {
+      "file": "java_tools-v23.0-davido.1.zip",
+      "sha256": "0165d2c77b01d8a276793d61d8909111343178a15afee352732204e9b2d91f70",
+      "size_bytes": 42863585,
+      "source_revision": "5c425b8d04a68bde4a3a3032715d350fd81c5660",
+      "platform": "platform-independent"
+    },
+    {
+      "file": "java_tools_darwin_x86_64-v23.0-davido.1.zip",
+      "sha256": "9ddbb9d2580c846fadc11d242a7778b425e720e273dc02e2492d357d0e43971d",
+      "size_bytes": 4333734,
+      "source_revision": "5c425b8d04a68bde4a3a3032715d350fd81c5660",
+      "platform": "darwin_x86_64"
+    },
+    {
+      "file": "java_tools_linux-v23.0-davido.1.zip",
+      "sha256": "ecf71d2b3e681e33449107bac4bc7a7cd7c563e2d125934913e56287baa490da",
+      "size_bytes": 12612018,
+      "source_revision": "1c06f0ced09a14c3f7bcd95351b9b527a5658e96",
+      "platform": "linux"
+    }
+  ],
+  "retained_official_native_artifacts": [
+    "java_tools_linux_aarch64",
+    "java_tools_darwin_arm64",
+    "java_tools_windows"
+  ],
+  "linux_build_environment": "Debian Bookworm, GCC 12.2, glibc 2.36",
+  "macos_build_architecture": "x86_64",
+  "source_note": "Linux was built one commit after the generic/macOS archives. The only intervening commit changes Bazel tar extraction, not Java tools sources."
+}
