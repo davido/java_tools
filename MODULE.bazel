@@ -1,5 +1,5 @@
 module(
     name = "java_tools",
-    version = "23.0-davido.1",
+    version = "23.0-davido.2",
     bazel_compatibility = [">=9.3.0"],
 )

@@ -1,16 +1,18 @@
 # Independently versioned java_tools snapshot catalog
 
-This experimental Bzlmod catalog selects personal `23.0-davido.1` builds
-from Bazel commit `5c425b8d04a68bde4a3a3032715d350fd81c5660` (generic
-and macOS) and `1c06f0ced09a14c3f7bcd95351b9b527a5658e96` (Linux).
-The only intervening commit changes Bazel tar extraction, not Java tools
-sources. This is not an official v23 release and is not published to the BCR.
+This experimental Bzlmod catalog selects personal `23.0-davido.2` builds
+from Bazel commit `227605fd2aecce4770c2f36053130aefb101406b`.
+All rebuilt archives use that revision, Bazel 9.3.3 and `-c opt`.
+This is not an official v23 release and is not published to the BCR.
 
 The snapshot includes the prebuilt ProGuard allowlister added by
 [bazel#32318](https://github.com/bazelbuild/bazel/pull/32318).
 The generic Java archive and native Linux x86-64/macOS x86-64 archives
 are rebuilt. Linux arm64, macOS arm64 and Windows retain the official
-v22.0 archives. Each artifact records its own source revision/version;
+v22.0 archives. We could not access the trusted Buildkite binaries pipeline;
+its public temporary-artifact bucket contained no archives for this revision.
+These three platforms have not been rebuilt or validated for this snapshot.
+Each artifact records its own source revision/version;
 `snapshot-manifest.json` records the new archives and their checksums.
 
 `@java_tools//:catalog.bzl` exports `JAVA_TOOLS_CONFIG`, schema version 1,

@@ -1,27 +1,34 @@
 {
-  "snapshot_version": "v23.0-davido.1",
+  "snapshot_version": "v23.0-davido.2",
   "upstream_release": false,
   "artifacts": [
     {
-      "file": "java_tools-v23.0-davido.1.zip",
-      "sha256": "0165d2c77b01d8a276793d61d8909111343178a15afee352732204e9b2d91f70",
-      "size_bytes": 42863585,
-      "source_revision": "5c425b8d04a68bde4a3a3032715d350fd81c5660",
+      "file": "java_tools-v23.0-davido.2.zip",
+      "sha256": "8302375bdf2c4ad5a9e15c03a4708d0d2e1b62a018b8b5842f185fc367b13a13",
+      "size_bytes": 42886906,
+      "source_revision": "227605fd2aecce4770c2f36053130aefb101406b",
       "platform": "platform-independent"
     },
     {
-      "file": "java_tools_darwin_x86_64-v23.0-davido.1.zip",
-      "sha256": "9ddbb9d2580c846fadc11d242a7778b425e720e273dc02e2492d357d0e43971d",
-      "size_bytes": 4333734,
-      "source_revision": "5c425b8d04a68bde4a3a3032715d350fd81c5660",
+      "file": "java_tools_darwin_x86_64-v23.0-davido.2.zip",
+      "sha256": "4660dca61c14bef2b7f06c3b3d762aecb9004b77249fe754a746e57ea27e084d",
+      "size_bytes": 1308082,
+      "source_revision": "227605fd2aecce4770c2f36053130aefb101406b",
       "platform": "darwin_x86_64"
     },
     {
-      "file": "java_tools_linux-v23.0-davido.1.zip",
-      "sha256": "ecf71d2b3e681e33449107bac4bc7a7cd7c563e2d125934913e56287baa490da",
-      "size_bytes": 12612018,
-      "source_revision": "1c06f0ced09a14c3f7bcd95351b9b527a5658e96",
+      "file": "java_tools_linux-v23.0-davido.2.zip",
+      "sha256": "d51fe945a3429f4c8e3044d42c373ada7148dfb381e49df086fcec97c8ed718a",
+      "size_bytes": 10284534,
+      "source_revision": "227605fd2aecce4770c2f36053130aefb101406b",
       "platform": "linux"
+    },
+    {
+      "file": "java_tools_sources-v23.0-davido.2.zip",
+      "sha256": "62e5e647ec6ca0c2a04ab4b61f1e6a7997410b49e5a6b698419b2b2c5d5814ce",
+      "size_bytes": 5743082,
+      "source_revision": "227605fd2aecce4770c2f36053130aefb101406b",
+      "platform": "sources"
     }
   ],
   "retained_official_native_artifacts": [
@@ -31,5 +38,6 @@
   ],
   "linux_build_environment": "Debian Bookworm, GCC 12.2, glibc 2.36",
   "macos_build_architecture": "x86_64",
-  "source_note": "Linux was built one commit after the generic/macOS archives. The only intervening commit changes Bazel tar extraction, not Java tools sources."
+  "source_note": "All rebuilt archives use the same Bazel revision, with -c opt and Bazel 9.3.3.",
+  "ci_access_note": "The trusted Buildkite java_tools pipeline was inaccessible during preparation. Its public temporary-artifact bucket had no archives at this revision. The three unrebuilt native platforms retain their official v22.0 pins."
 }
